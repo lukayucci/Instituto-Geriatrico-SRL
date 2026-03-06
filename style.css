@@ -1,0 +1,1099 @@
+:root {
+  --verde-principal: #86A397;
+  --verde-claro: #B8D8BA;
+  --blanco-fondo: #F8FAF9; 
+  --blanco-hueso: #FDFDFB;
+  --texto-oscuro: #333F48;
+  --texto-gris: #666666;
+  --whatsapp: #25D366;
+  --texto-principal: Barlow, sans-serif
+  --texto-secundario: Alan Sans, sans-serif
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--blanco-fondo);
+}
+
+header{
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    align-items: center;
+    padding: 0px 30px;
+    z-index: 10;
+    
+}
+
+.container__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img__title{
+    width: 200px;
+    height: 165px;
+    border-radius: 50%;
+}
+
+.nav__container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.nav__list{
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0px;
+    display: none;
+    background-color: var(--verde-claro);
+    min-width: 300px;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.nav__link{
+    margin: 15px 0;
+}
+
+.a{
+    color: var(--texto-oscuro);
+    font-family: 'Barlow', sans-serif; 
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.burguer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    bottom: 10px;
+}
+
+.bar{
+    display: flex;
+    content: '';
+    width: 25px;
+    height: 3px;
+    background-color: var(--verde-principal);
+    margin: 4px 0;
+}
+
+.nav__list.show{
+    display: flex;
+}
+
+
+/* Quitar subrayado de los enlaces del menú */
+.nav__list a,
+.nav__link .a{
+    text-decoration: none;
+    color: inherit;
+}
+.nav__list a:hover,
+.nav__list a:focus{
+    text-decoration: none;
+}
+
+.buho{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+}
+
+.logo__buho{
+    width: 80px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.container__main{
+    display: block;
+    /* Contenedor tipo 'hero' para la imagen principal */
+    position: relative;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.img__main{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(0.62);
+}
+
+/* Título sobre la imagen (centrado en el eje X, encima de la imagen) */
+.main__title{
+    font-family: 'Lora', serif;
+    color: var(--blanco-fondo);
+    font-size: clamp(1.4rem, 3vw, 2.4rem);
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    transform: translate(-50%, 10%);
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    animation: revealUp 700ms both;
+    animation-timeline: hero-timeline;
+    animation-range: 0 0.6;
+}
+
+/* Animación basada en scroll (CSS Scroll-Linked Animations). Degradado: si no está soportado, la animación puede reproducirse en carga. */
+@keyframes revealUp {
+    0% { 
+      opacity: 0;
+      transform: translate(-50%, 22%); }
+    100%  { 
+      opacity: 1; 
+      transform: translate(-50%, -50%); }
+}
+
+
+
+
+.pilares {
+  position: relative;
+  z-index: 10; /* Asegura que esté por encima del Hero */
+  animation: revealpilares 3s both;
+  animation-timeline: scroll();
+  animation-range: 5px 100px; /* Comienza justo cuando el título termina de aparecer */
+}
+
+@keyframes revealpilares {
+  0% { 
+    opacity: 0.3;
+    transform: translateY(100px); }
+
+    50%{
+      opacity: 0.6;
+      transform: translateY(50px);
+    }
+
+  100%  { 
+    opacity: 1; 
+    transform: translateY(0); }
+  
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin: 0 auto;
+  margin-top: -15px; 
+}
+
+.card {
+  background-color: var(--blanco-fondo);
+  padding: 40px 30px;
+  border: solid 3px var(--verde-principal);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra suave y elegante */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Efecto de que se levanta un poquito al pasar el mouse */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.icon-verde {
+  font-size: 3rem;
+  color: var(--verde-principal);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--texto-oscuro);
+  font-family: 'Barlow', sans-serif; 
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--texto-gris);
+  line-height: 1.6;
+  font-family: Barlow, sans-serif;
+}
+
+/* --- BLOQUE: SERVICES --- */
+.services {
+  padding: 80px 5%;
+  background-color: var(--blanco-fondo);
+}
+
+.services__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services__title {
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-size: 2.2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 10px;
+}
+
+.services__subtitle {
+  text-align: center;
+  font-family: Alan Sans;
+  color: var(--texto-gris);
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+/* --- BLOQUE: ACCORDION --- */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.accordion__item {
+  background-color: var(--blanco-hueso);
+  border: 3px solid var(--verde-principal);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.accordion__item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Modificador Activo */
+.accordion__item--active {
+  border: 3px solid var(--verde-principal);
+  background-color: var(--blanco-fondo);
+  box-shadow: 0 4px 20px rgba(134, 163, 151, 0.15);
+}
+
+.accordion__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordion__title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.accordion__icon {
+  font-size: 1.5rem;
+  color: var(--verde-principal);
+}
+
+.accordion__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Barlow', sans-serif;
+  color: var(--texto-oscuro);
+  margin: 0;
+}
+
+.accordion__toggle {
+  color: var(--verde-principal);
+  transition: transform 0.4s ease;
+}
+
+.accordion__item--active .accordion__toggle {
+  transform: rotate(180deg);
+  color: var(--verde-principal);
+}
+
+/* Magia de la animación del acordeón usando CSS Grid */
+.accordion__content {
+  display: grid;
+  grid-template-rows: 0fr; /* Empieza cerrado */
+  transition: grid-template-rows 0.4s ease-in-out;
+}
+
+.accordion__item--active .accordion__content {
+  grid-template-rows: 1fr; /* Se abre al contenido */
+}
+
+.accordion__inner {
+  overflow: hidden; /* Necesario para que el Grid funcione */
+}
+
+.accordion__list {
+  padding: 0 30px 25px 50px; /* Alineado con el texto del título */
+  margin: 0;
+  color: var(--texto-gris);
+  font-family: Alan Sans;
+  line-height: 1.7;
+}
+
+.accordion__list li {
+  margin-bottom: 10px;
+}
+
+.accordion__list strong {
+  color: var(--texto-oscuro);
+  font-size: 1.2rem;
+}
+
+/* Galería de Recreación */
+.accordion__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 0 30px 25px 50px;
+}
+
+.accordion__image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* --- BLOQUE: ACTIVITIES --- */
+.activities {
+  background-color: var(--blanco-fondo);
+  color: var(--texto-oscuro);
+  padding: 80px 0 40px 0; /* Sin padding lateral para que los fondos especiales lleguen al borde */
+  overflow: hidden; /* Evita scroll horizontal si algo sobresale */
+}
+
+.activities__main-title {
+  text-align: center;
+  font-family: 'Oldenburg', serif; /* Podés usar serif acá para darle ese toque poético */
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 60px;
+  padding: 0 5%;
+  line-height: 1.3;
+}
+
+/* Evento Individual */
+.activities__event {
+  padding: 60px 5%;
+  position: relative; /* Clave para que los fondos especiales funcionen */
+}
+
+.activities__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 2; /* Para que el texto quede por encima de las marcas de agua */
+}
+
+
+
+.activities__content {
+  flex: 1;
+}
+
+.activities__title {
+  font-family: Barlow, sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--texto-oscuro);
+}
+
+.activities__text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--texto-gris);
+  font-family: Alan Sans, sans-serif;
+}
+
+.activities__media {
+  flex: 1;
+}
+
+.activities__image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.activities__image:hover {
+  transform: scale(1.02);
+}
+
+.activities__image--circular {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Modificador: Aniversario (Centrado) */
+.activities__container--center {
+  flex-direction: column;
+  text-align: center;
+  max-width: 800px;
+}
+
+.activities__event--aniversario {
+  margin-top: 40px;
+  padding-top: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Una línea sutil para separarlo */
+}
+
+/* --- FONDOS ESPECIALES (Marcas de Agua) --- */
+/* Halloween */
+.activities__event--halloween::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url('imagenes/fondo-halloween.jpeg'); /* Buscá una foto de calabazas en alta calidad */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* Super sutil para no tapar el texto */
+  z-index: 1;
+}
+
+.activities__text--halloween{
+  color: var(--blanco-fondo); /* Para que resalte sobre el fondo oscuro */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7); /* Un poco de sombra para mejorar la legibilidad */
+  font-weight: 600;
+}
+
+/* Navidad */
+.activities__event--navidad::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1920&q=80'); /* Foto de luces navideñas */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* Apenas visible para dar atmósfera */
+  z-index: 1;
+}
+
+.activities__text--christmas {
+  color: #000; /* Para que resalte sobre el fondo oscuro */
+  font-weight: 600;
+}
+
+
+.activities__container,
+.activities__event--reverse .activities__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+.activities__main-title {
+    font-size: 2rem;
+  }
+
+.activities__image--circular {
+    max-width: 250px;
+  }
+
+  .aboutus{
+    padding: 80px 5%;
+    background-color: #fff;
+    color: var(--texto-oscuro);
+    text-align: center;
+  }
+
+  .aboutus__content {
+    flex: 1;
+  }
+
+  .aboutus__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.aboutus__title {
+  font-family: Barlow, sans-serif;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  color: var(--texto-oscuro);
+  font-weight: 600;
+}
+
+
+
+
+.aboutus__text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--texto-gris);
+  font-family: Alan Sans, sans-serif;
+  font-weight: 500;
+}
+
+.aboutus__media {
+  flex: 1;
+  z-index: -1000;
+}
+
+.aboutus__image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 100%;
+  transition: transform 0.5s ease;
+}
+
+.aboutus__image:hover {
+  transform: scale(1.1);
+}
+
+.aboutus__container,
+.aboutus__--reverse{
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  /* --- BLOQUE: ADMISSION (Proceso de Ingreso) --- */
+.admission {
+  padding: 80px 5%;
+  background-color: var(--blanco-hueso); /* Un fondo suave para diferenciar la sección */
+}
+
+.admission__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.admission__title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 15px;
+  font-family: 'Barlow', sans-serif;
+
+}
+
+.admission__subtitle {
+  text-align: center;
+  color: var(--texto-gris);
+  margin-bottom: 60px;
+  font-size: 1.1rem;
+  font-family: Alan Sans, sans-serif;
+}
+
+/* --- LISTA Y LÍNEA CONECTORA --- */
+.admission__list {
+  list-style: none; /* Quitamos los números por defecto del <ol> */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* MOBILE: Apilados verticalmente */
+  gap: 40px;
+  position: relative;
+}
+
+/* La línea punteada (Mobile: Vertical) */
+.admission__list::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 24px; /* Centrada justo detrás de los círculos de 50px */
+  width: 2px;
+  background-image: linear-gradient(to bottom, var(--verde-principal) 50%, transparent 50%);
+  background-size: 2px 14px; /* Crea el efecto punteado */
+  z-index: 1;
+}
+
+/* --- ELEMENTOS Y ANIMACIÓN --- */
+.admission__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  z-index: 2; /* Para que quede por encima de la línea */
+  
+  /* ESTADO INICIAL PARA LA ANIMACIÓN JS */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* ESTADO FINAL (Se agrega con JS) */
+.admission__item--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.admission__step-number {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0; /* Evita que el círculo se achique */
+  background-color: var(--verde-claro);
+  color: var(--blanco-fondo);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 0 0 5px var(--blanco-hueso); /* Crea un "hueco" alrededor del círculo cortando la línea */
+}
+
+.admission__step-title {
+  font-size: 1.3rem;
+  color: var(--texto-oscuro);
+  margin: 0 0 8px 0;
+  font-family: Barlow, sans-serif;
+}
+
+.admission__step-text {
+  font-size: 0.95rem;
+  color: var(--texto-gris);
+  line-height: 1.6;
+  margin: 0;
+  font-family: Alan Sans, sans-serif;
+}
+
+/* --- PARALLAX --- */
+.gallery__parallax {
+  height: 400px;
+  background-image: url('imagenes/fondo.jpeg');
+  background-attachment: fixed; /* ACÁ ESTÁ EL EFECTO PARALLAX */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.gallery__parallax::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3); /* Oscurece un poco para leer el titulo */
+}
+
+.gallery__parallax-title {
+  color: var(--blanco-fondo);
+  z-index: 1;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: Barlow, sans-serif;
+}
+
+/* --- GRID --- */
+.gallery__grid-container {
+  padding: 80px 5%;
+  background-color: var(--blanco-fondo);
+}
+
+.gallery__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr; /* Mobile: 1 columna */
+}
+
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 300px;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery__img--top{
+  object-position: top;
+}
+
+.gallery__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.6));
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: Alan Sans, sans-serif;
+}
+
+.gallery__overlay span {
+  color: white;
+  font-weight: 500;
+}
+
+.gallery__item:hover .gallery__img { transform: scale(1.1); }
+.gallery__item:hover .gallery__overlay { opacity: 1; }
+
+/* --- BLOQUE: FOOTER --- */
+.footer {
+  background-color: #1A1F1D; /* Color oscuro para diferenciar */
+  color: #E0E4E2;
+  padding: 80px 5% 20px;
+}
+
+.footer__container {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile First */
+  gap: 40px;
+}
+
+.footer__logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.footer__logo {
+  height: 100px;
+}
+
+.footer__brand {
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: Barlow, sans-serif;
+  letter-spacing: 1px;
+}
+
+.footer__description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.7;
+  font-family: Alan Sans, sans-serif;
+}
+
+.footer__title {
+  color: var(--verde-claro);
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Barlow, sans-serif;
+}
+
+.footer__links {
+  padding: 0;
+  font-family: Alan Sans, sans-serif;
+}
+
+.footer__link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+  color: var(--verde-claro);
+}
+
+.footer__info {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  font-family: Alan Sans, sans-serif;
+}
+
+.footer__map {
+  border-radius: 8px;
+  overflow: hidden;
+  filter: grayscale(0.5) contrast(1.2); /* Estética minimalista para el mapa */
+}
+
+.footer__bottom {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+/* --- BOTÓN WHATSAPP FLOTANTE --- */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--verde-principal); /* Verde original de WhatsApp */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  background-color: #128C7E;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 855px) {
+
+    header{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 2px;
+    }
+
+    .nav__list{
+        display: flex;
+        position: static;
+        background-color: transparent;
+        flex-direction: row;
+        color: var(--verde-principal);
+        gap: 20px;
+    }
+
+    .a{
+        display: inline-block;
+        list-style: none;
+    }
+
+    .a:hover{
+        color: var(--verde-principal);
+        transform: scale(1.1);
+        text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+
+
+
+    .bar{
+        display: none;
+    }
+
+    .pilares {
+  animation: revealpilares linear both;
+  view-timeline-name: --reveal;
+  animation-timeline: --reveal;
+  animation-range: cover 35px contain 60px; 
+}
+
+@keyframes revealpilares {
+  0% { 
+    opacity: 0.3;
+    transform: translateY(100px); }
+
+    50%{
+      opacity: 0.6;
+      transform: translateY(50px);
+    }
+
+  100%  { 
+    opacity: 1; 
+    transform: translateY(0); }
+  
+}
+
+.services{
+  animation: revealservicios linear both;
+  view-timeline-name: --revealservicios;
+  animation-timeline: --revealservicios;
+  animation-range: cover 65px contain 75px; 
+}
+
+@keyframes revealservicios {
+  0% { 
+    opacity: 0;
+    
+   }
+
+  50%{
+      opacity: 0.6;
+      
+    }
+
+  100%  { 
+    opacity: 1; 
+  }
+  
+}
+
+    .activities__main-title{
+    font-size: 2.5rem;
+    }
+
+    .activities__event--reverse .activities__container {
+      flex-direction: row-reverse;
+    }
+
+    .activities__image--circular {
+      max-width: 350px;
+    }
+
+    .aboutus__container {
+      flex-direction: row;
+      text-align: center;
+    }
+
+    .aboutus__title{
+      font-size: 2.6em;
+    }
+
+    .aboutus__text {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+
+    .aboutus__image {
+      width: 100%;
+      height: 500px;
+      border-radius: 50%;
+    }
+
+
+
+
+
+    .admission__list {
+    flex-direction: row; /* Pasa a faja horizontal */
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  /* La línea punteada (PC: Horizontal) */
+  .admission__list::before {
+    top: 24px; /* A la altura de la mitad del círculo */
+    bottom: auto;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    height: 2px;
+    background-image: linear-gradient(to right, var(--verde-principal) 50%, transparent 50%);
+    background-size: 14px 2px;
+  }
+
+  .admission__item {
+    flex-direction: column; /* Círculo arriba, texto abajo */
+    align-items: center;
+    text-align: center;
+    flex: 1; /* Para que todos ocupen el mismo ancho */
+  }
+
+  /* Retraso en cascada para PC: Como aparecen juntos en pantalla, le damos un delay a cada uno */
+  .admission__item:nth-child(1) { transition-delay: 0.1s; }
+  .admission__item:nth-child(2) { transition-delay: 0.5s; }
+  .admission__item:nth-child(3) { transition-delay: 0.7s; }
+  .admission__item:nth-child(4) { transition-delay: 1s; }
+
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+  }
+
+  .gallery__item--large {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .gallery__item--wide {
+    grid-column: span 2;
+  }
+
+  .footer__container {
+    grid-template-columns: 2fr 1fr 1.5fr; /* Diseño balanceado en PC */
+  }
+
+
+
+
+
+
+
+
+
+
+
+}    

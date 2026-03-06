@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hurricane&family=Lora:ital,wght@0,400..700;1,400..700&family=Oldenburg&family=Sirin+Stencil&family=Sixtyfour&family=Tapestry&display=swap" rel="stylesheet">
+    <title>Geriatrico De Los Santos</title>
+</head>
+<body>
+
+    <header>
+
+            <section class="container__title">
+                <img src="imagenes/logo.png" alt="Logo del Geriatrico De Los Santos" class="img__title">
+            </section>
+
+            <section class="buho">
+                <img src="imagenes/buho.jpg" alt="búho volando" class="logo__buho">
+            </section>
+
+
+
+        <nav class="nav__container">
+            <ul class="nav__list">
+                <li class="nav__link"><a href="#servicios" class="a">Servicios</a></li>
+                <li class="nav__link"><a href="#actividades" class="a">Actividades</a></li>
+                <li class="nav__link"><a href="#sobrenosotros" class="a">Sobre Nosotros</a></li>
+            </ul>
+
+            <div class="burguer" id="burguer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container__main">
+            <img src="imagenes/señora.png" alt="señora mayor" class="img__main">
+            <h1 class="main__title">Un hogar donde la sabiduría se encuentra con el cuidado profesional</h1>
+
+        </section>
+
+        <section class="pilares">
+
+                <div class="cards-container"> 
+                    <div class="card">
+                        <i class="fa-solid fa-user-doctor icon-verde"></i>
+                        <h3>Atención Médica 24hs</h3>
+                        <p>Equipo de profesionales de la salud capacitados para brindar seguimiento continuo y personalizado.</p>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa-solid fa-people-group icon-verde"></i>
+                        <h3>Ambiente Familiar</h3>
+                        <p>Instalaciones diseñadas para transmitir paz, comodidad y el calor de un verdadero hogar.</p>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa-solid fa-apple-whole icon-verde"></i>
+                        <h3>Nutrición Balanceada</h3>
+                        <p>Menús elaborados por nutricionistas, adaptados a las necesidades específicas de cada residente.</p>
+                    </div>
+
+                </div>
+        </section>
+
+
+      <section class="services" id="servicios">
+              <div class="services__container">
+                  <h2 class="services__title">Cuidado Integral y Personalizado</h2>
+                  <p class="services__subtitle">Nuestros servicios están diseñados para garantizar el bienestar físico, mental y emocional.</p>
+
+              <div class="accordion">
+            
+            <article class="accordion__item">
+              <button class="accordion__header" aria-expanded="false" aria-controls="content-1">
+                <div class="accordion__title-wrapper">
+                  <i class="fa-solid fa-user-doctor accordion__icon"></i>
+                  <h3 class="accordion__title">Atención Médica y Sanitaria</h3>
+                </div>
+                <i class="fa-solid fa-chevron-down accordion__toggle"></i>
+              </button>
+              <div class="accordion__content" id="content-1">
+                <div class="accordion__inner">
+                  <ul class="accordion__list">
+                    <li><strong>Supervisión médica especializada:</strong> Consultas regulares con médicos geriatras para el manejo de enfermedades crónicas y el control de medicamentos.</li>
+                    <li><strong>Enfermería 24 horas:</strong> Monitoreo constante de signos vitales, administración de medicación y curaciones.</li>
+                    <li><strong>Rehabilitación y Terapias:</strong> Servicios de kinesiología, fisioterapia y terapia ocupacional para mantener la movilidad y funcionalidad física.</li>
+                    <li><strong>Apoyo Psicológico y Cognitivo:</strong> Estimulación de la memoria, atención psiquiátrica y acompañamiento emocional para el residente y su familia.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion__item">
+              <button class="accordion__header" aria-expanded="false" aria-controls="content-2">
+                <div class="accordion__title-wrapper">
+                  <i class="fa-solid fa-people-group accordion__icon"></i>
+                  <h3 class="accordion__title">Cuidado Personal y Asistencia Diaria</h3>
+                </div>
+                <i class="fa-solid fa-chevron-down accordion__toggle"></i>
+              </button>
+              <div class="accordion__content" id="content-2">
+                <div class="accordion__inner">
+                  <ul class="accordion__list">
+                    <li><strong>Actividades de la vida diaria (AVD):</strong> Ayuda en la higiene personal, vestimenta, alimentación y traslados para personas dependientes. Cuenta también peluquería, pedicuría y podología.</li>
+                    <li><strong>Alimentación supervisada:</strong> Dietas personalizadas elaboradas por nutricionistas, adaptadas a las necesidades médicas de cada residente (diabetes, hipertensión, etc.).</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion__item">
+              <button class="accordion__header" aria-expanded="false" aria-controls="content-3">
+                <div class="accordion__title-wrapper">
+                  <i class="fa-solid fa-bed accordion__icon"></i>
+                  <h3 class="accordion__title">Servicios de Hotelería y Confort</h3>
+                </div>
+                <i class="fa-solid fa-chevron-down accordion__toggle"></i>
+              </button>
+              <div class="accordion__content" id="content-3">
+                <div class="accordion__inner">
+                  <ul class="accordion__list">
+                    <li><strong>Alojamiento:</strong> Habitaciones individuales o compartidas equipadas con sistemas de seguridad y timbres de emergencia.</li>
+                    <li><strong>Lavandería y limpieza:</strong> Servicio integral de aseo de las instalaciones y mantenimiento de la ropa personal.</li>
+                    <li><strong>Seguridad:</strong> Instalaciones adaptadas con rampas, barras de sujeción y vigilancia constante para prevenir caídas y accidentes. Contamos con camaras de seguridad que funcionan 24 horas</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion__item">
+              <button class="accordion__header" aria-expanded="false"    aria-controls="content-4">
+                <div class="accordion__title-wrapper">
+                  <i class="fa-solid fa-palette accordion__icon"></i>
+                  <h3 class="accordion__title">Socialización y Recreación</h3>
+                </div>
+                <i class="fa-solid fa-chevron-down accordion__toggle"></i>
+              </button>
+              <div class="accordion__content" id="content-4">
+                <div class="accordion__inner">
+                  <ul class="accordion__list">
+                    <li><strong>Actividades lúdicas y talleres:</strong> Clases de arte, música, juegos de mesa (bingo, dominó), gimnasia suave y talleres de cocina.</li>
+                    <li><strong>Eventos sociales:</strong> Celebraciones de cumpleaños y festividades que fomentan la integración y el sentido de comunidad.</li>
+                  </ul>
+                  <div class="accordion__gallery">
+                    <img src="https://images.unsplash.com/photo-1529158062015-c64defbea4e4?w=500&q=80" alt="Abuelos pintando en un taller de arte" class="accordion__image">
+                    <img src="https://images.unsplash.com/photo-1574607407408-1e681c46041d?w=500&q=80" alt="Adultos mayores jugando un juego de mesa" class="accordion__image">
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="activities" id="actividades">
+          <h2 class="activities__main-title">"En cada nueva estación, nos espera una nueva emoción"</h2>
+
+            <article class="activities__event">
+              <div class="activities__container">
+                <div class="activities__content">
+                  <h3 class="activities__title">Pascuas en Familia</h3>
+                  <p class="activities__text">Celebramos la esperanza y la renovación. Nuestros residentes comparten momentos de fe, decoran roscas tradicionales y disfrutan de un almuerzo especial que trae el calor del domingo en familia directamente a nuestras mesas.</p>
+                </div>
+                <div class="activities__media">
+                  <img src="https://images.unsplash.com/photo-1522276498395-f4f68f7f8454?w=600&q=80" alt="Celebración de Pascuas" class="activities__image">
+                </div>
+              </div>
+            </article>
+
+            <article class="activities__event activities__event--reverse">
+              <div class="activities__container">
+                <div class="activities__content">
+                  <h3 class="activities__title">25 de Mayo: Sentimiento Patrio</h3>
+                  <p class="activities__text">El orgullo nacional se vive a flor de piel. Entre escarapelas, locro y pastelitos, recordamos nuestras raíces acompañados de música folclórica, creando un ambiente donde la historia y la memoria son las protagonistas.</p>
+                </div>
+                <div class="activities__media">
+                  <img src="imagenes/revolucion-mayo.jpeg" alt="Festejo del 25 de mayo" class="activities__image">
+                </div>
+              </div>
+            </article>
+
+            <article class="activities__event activities__event--halloween">
+              <div class="activities__container">
+                <div class="activities__content">
+                  <h3 class="activities__title">Octubre de Creatividad y Halloween</h3>
+                  <p class="activities__text activities__text--halloween">¡El geriátrico se transforma! Durante todo el mes, nuestros residentes son los directores de arte: aportan ideas, recortan, pintan y decoran cada rincón. La imaginación no tiene edad y las risas llenan los pasillos.</p>
+                </div>
+                <div class="activities__media">
+                  <img src="imagenes/halloween.jpeg" alt="Abuelos decorando para Halloween" class="activities__image">
+                </div>
+              </div>
+            </article>
+
+            <article class="activities__event activities__event--reverse">
+              <div class="activities__container">
+                <div class="activities__content">
+                  <h3 class="activities__title">10 de Noviembre: Día de la Tradición</h3>
+                  <p class="activities__text">Un homenaje a nuestras costumbres gauchas. Compartimos mates, anécdotas del campo, recitado de versos y la música que llevamos en la sangre, manteniendo viva la llama de nuestra identidad argentina.</p>
+                </div>
+                <div class="activities__media">
+                  <img src="imagenes/dia-tradicion.png" alt="Mates en el día de la tradición" class="activities__image activities__image--circular">
+                </div>
+              </div>
+            </article>
+
+            <article class="activities__event activities__event--navidad">
+              <div class="activities__container">
+                <div class="activities__content">
+                  <h3 class="activities__title">Diciembre Mágico: Preparando la Navidad</h3>
+                  <p class="activities__text activities__text--christmas">El mes más emotivo del año. Las manos que trabajaron toda una vida ahora se unen para armar el arbolito y crear adornos. Es un momento de pura colaboración, paz y espera compartida, donde el espíritu navideño nos abraza a todos.</p>
+                </div>
+                <div class="activities__media">
+                  <img src="https://images.unsplash.com/photo-1543258103-a62bdc069871?w=600&q=80" alt="Manos de adultos mayores armando el arbolito" class="activities__image">
+                </div>
+              </div>
+            </article>
+
+            <article class="activities__event activities__event--aniversario">
+              <div class="activities__container activities__container--center">
+                <div class="activities__content activities__content--center">
+                  <h3 class="activities__title">Nuestro Aniversario</h3>
+                  <p class="activities__text">Un año más brindando amor, cuidado profesional y un hogar seguro. Celebramos nuestra historia junto a las familias que confían en nosotros día a día. ¡Gracias por ser parte de Geriátrico De Los Santos!</p>
+                </div>
+              </div>
+            </article>
+      </section>
+
+      <section class="aboutus aboutus__reverse" id="sobrenosotros">
+        <article class="aboutus__event">
+                <div class="aboutus__container">
+                  <div class="aboutus__content">
+                    <h3 class="aboutus__title">Sobre Nosotros</h3>
+                    <p class="aboutus__text">Somos un equipo dedicado a brindar el mejor cuidado y atención a nuestros residentes, creando un ambiente acogedor y lleno de amor. Nuestra misión es mejorar la calidad de vida de las personas mayores, respetando su dignidad y promoviendo su bienestar físico y emocional.</p>
+                  </div>
+                  <div class="aboutus__media">
+                    <img src="imagenes/buhoposando.jpg" alt="Buho en posición de pose mirando hacia la derecha" class="aboutus__image">
+                  </div>
+                </div>
+        </article>
+      </section>
+
+      <section class="admission" id="ingreso">
+          <div class="admission__container">
+            <h2 class="admission__title">El Camino hacia un Nuevo Hogar</h2>
+            <p class="admission__subtitle">Un proceso transparente y humano para asegurar la mejor bienvenida.</p>
+
+            <ol class="admission__list">
+              
+              <li class="admission__item first-item">
+                <div class="admission__step-number">1</div>
+                <div class="admission__content">
+                  <h3 class="admission__step-title">Contacto Inicial</h3>
+                  <p class="admission__step-text">Una charla cercana por WhatsApp y una visita guiada para conocer nuestros espacios.</p>
+                </div>
+              </li>
+
+              <li class="admission__item second-item">
+                <div class="admission__step-number">2</div>
+                <div class="admission__content">
+                  <h3 class="admission__step-title">Pre-Admisión</h3>
+                  <p class="admission__step-text">Encuentro previo para conocer la historia, gustos y necesidades del futuro residente.</p>
+                </div>
+              </li>
+
+              <li class="admission__item third-item">
+                <div class="admission__step-number">3</div>
+                <div class="admission__content">
+                  <h3 class="admission__step-title">Bienvenida</h3>
+                  <p class="admission__step-text">Entrevista formal con el residente y su familiar para construir el plan de cuidado personalizado.</p>
+                </div>
+              </li>
+
+              <li class="admission__item fourth-item">
+                <div class="admission__step-number">4</div>
+                <div class="admission__content">
+                  <h3 class="admission__step-title">Valoración Médica</h3>
+                  <p class="admission__step-text">Solicitamos epicrisis y estudios recientes para garantizar un cuidado de excelencia y a medida.</p>
+                </div>
+              </li>
+
+            </ol>
+          </div>
+      </section>
+
+      <section class="gallery">
+        <div class="gallery__parallax">
+          <h2 class="gallery__parallax-title">Conozca su próximo hogar</h2>
+        </div>
+
+        <div class="gallery__grid-container">
+          <div class="gallery__grid">
+            
+            <article class="gallery__item gallery__item--large">
+              <img src="imagenes/fondo.jpeg" alt="Fondo de la institución" class="gallery__img">
+              <div class="gallery__overlay"><span>Fondo</span></div>
+            </article>
+
+            <article class="gallery__item">
+              <img src="imagenes/habitacion-compartida.jpeg" alt="Habitacion compartida" class="gallery__img">
+              <div class="gallery__overlay"><span>Habitación Compartida</span></div>
+            </article>
+
+            <article class="gallery__item">
+              <img src="comedor.jpg" alt="Salon comedor" class="gallery__img">
+              <div class="gallery__overlay"><span>Salón Comedor</span></div>
+            </article>
+
+            <article class="gallery__item gallery__item--wide">
+              <img src="imagenes/salon-kinesiologia.jpeg" alt="Sala de kinesiologia" class="gallery__img">
+              <div class="gallery__overlay"><span>Sala de Terapia</span></div>
+            </article>
+
+            <article class="gallery__item">
+              <img src="imagenes/perrita.jpeg" alt="Peppa" class="gallery__img">
+              <div class="gallery__overlay"><span>Peppa</span></div>
+            </article>
+
+            <article class="gallery__item gallery__item--wide">
+              <img src="imagenes/gatito.jpeg" alt="Gatito de la Instalación" class="gallery__img">
+              <div class="gallery__overlay"><span>Gatito de la Instalación</span></div>
+            </article>
+
+            <article class="gallery__item">
+              <img src="imagenes/cumpleaños.jpeg" alt="festejando cumpleaños" class="gallery__img">
+              <div class="gallery__overlay"><span>Festejo de Cumpleaños</span></div>
+            </article>
+
+            <article class="gallery__item">
+              <img src="imagenes/brujita.jpeg" alt="Disfraz de Bruja" class="gallery__img">
+              <div class="gallery__overlay"><span>Disfraz de Brujita</span></div>
+            </article>
+
+            <article class="gallery__item gallery__item--wide">
+              <img src="imagenes/actividad-excursion.jpeg" alt="Actividad de excursión" class="gallery__img">
+              <div class="gallery__overlay"><span>Actividad de Excursión</span></div>
+            </article>
+
+            <article class="gallery__item">
+              <img src="imagenes/peppa-posando.jpeg" alt="Perrita de la instalación" class="gallery__img">
+              <div class="gallery__overlay"><span>Peppa Posando</span></div>
+            </article>
+
+            <article class="gallery__item">
+              <img src="imagenes/peppa-residente.jpeg" alt="Perrita con una residente" class="gallery__img">
+              <div class="gallery__overlay"><span>Peppa sobre una Residente</span></div>
+            </article>
+
+            <article class="gallery__item">
+              <img src="imagenes/peppa-descansando.jpeg" alt="Perrita descansando" class="gallery__img">
+              <div class="gallery__overlay"><span>Más de Peppa!!</span></div>
+            </article>
+
+          
+
+          </div>
+        </div>
+      </section>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        
+        <div class="footer__column">
+          <div class="footer__logo-wrapper">
+            <img src="imagenes/buhoposando.png" alt="Geriátrico De Los Santos" class="footer__logo">
+            <span class="footer__brand">De Los Santos</span>
+          </div>
+          <p class="footer__description">Excelencia en el cuidado del adulto mayor, donde la sabiduría se encuentra con el profesionalismo.</p>
+        </div>
+
+        <nav class="footer__column" aria-label="Navegación secundaria">
+          <h4 class="footer__title">Navegación</h4>
+          <ul class="footer__links">
+            <li><a href="#servicios" class="footer__link">Servicios</a></li>
+            <li><a href="#actividades" class="footer__link">Actividades Anuales</a></li>
+            <li><a href="#ingreso" class="footer__link">Proceso de Ingreso</a></li>
+            <li><a href="#sobrenosotros" class="footer__link">Sobre Nosotros</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__column">
+          <h4 class="footer__title">Ubicación</h4>
+          <p class="footer__info"><i class="fa-solid fa-location-dot"></i> Vidal 2127, Belgrano, Buenos Aires</p>
+          <div class="footer__map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.532320473926!2d-58.46272768477134!3d-34.56385108046927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb3d6b6644505%3A0x1c429dee44bcd329!2sVidal%202127%2C%20C1428CSG%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1709760000000!5m2!1ses-419!2sar" 
+            width="100%" 
+            height="150" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Instituto Geriátrico De Los Santos SRL - Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/1149470070" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+
+    
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
