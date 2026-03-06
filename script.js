@@ -2,6 +2,11 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
+window.addEventListener('load', () => {
+  // 2. Asegurar que al cargar aparezca arriba
+  window.scrollTo(0, 0);
+});
+
 const burguerBtn = document.querySelector('#burguer');
 const enlaces = document.querySelector('.nav__list'); 
 
