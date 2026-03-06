@@ -1,3 +1,7 @@
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
 const burguerBtn = document.querySelector('#burguer');
 const enlaces = document.querySelector('.nav__list'); 
 
@@ -58,3 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(step);
     });
   });
+
