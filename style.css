@@ -709,8 +709,6 @@ header{
   height: 400px;
   background-image: url('imagenes/fondo.jpeg');
   background-attachment: fixed; /* ACÁ ESTÁ EL EFECTO PARALLAX */
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -742,7 +740,7 @@ header{
 .gallery__grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: 1fr; /* Mobile: 1 columna */
+  grid-template-columns: 1fr; 
 }
 
 .gallery__item {
