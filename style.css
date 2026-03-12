@@ -1002,6 +1002,11 @@ header{
     font-size: 2.5rem;
     }
 
+    .activities__image-spring{
+      width: 900px;
+      height: 400px;
+    }
+
     .activities__event--reverse .activities__container {
       flex-direction: row-reverse;
     }
