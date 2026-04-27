@@ -709,7 +709,7 @@ header{
   height: 400px;
   background-image: url('imagenes/fondo.jpeg');
   background-attachment: fixed; /* ACÁ ESTÁ EL EFECTO PARALLAX */
-  background-size: cover;
+  background-size: contain;
   display: flex;
   align-items: center;
   justify-content: center;
